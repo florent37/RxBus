@@ -1,0 +1,36 @@
+language: android
+
+android:
+  components:
+    - tools
+    - platform-tools
+    - build-tools-25.0.0
+    - android-25
+    - extra-android-m2repository
+    - sys-img-armeabi-v7a-android-14
+
+jdk:
+  - oraclejdk8
+
+script:
+  - ./gradlew ":$MODULE:install"
+
+after_success:
+  - ./gradlew ":$MODULE:bintrayUpload"
+
+env:
+  matrix:
+    - MODULE=rxbus
+
+branches:
+  except:
+    - gh-pages
+
+notifications:
+  email: false
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.gradle
