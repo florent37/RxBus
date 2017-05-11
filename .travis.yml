@@ -3,11 +3,17 @@ language: android
 android:
   components:
     - tools
+    - tools
     - platform-tools
     - build-tools-25.0.0
     - android-25
     - extra-android-m2repository
     - sys-img-armeabi-v7a-android-14
+    - extra-android-support
+    - extra-google-google_play_services
+    - extra-android-m2repository
+    - extra-google-m2repository
+    - addon-google_apis-google-21
 
 jdk:
   - oraclejdk8
@@ -21,9 +27,6 @@ after_success:
 env:
   matrix:
     - MODULE=rxbus
-  global:
-    - secure: "kgsT0j2b0GYbQjrDSdIYoh9lXOb2bAqA8gOx7ipegYLiNUuAjTeclw/3IFd5WpPNEhwTvDlb8Pwi/GYsXwYLdjysZUsj73a027swKAuXRBEjnBpfcvhEwKdoO5Ygoz/uH7TvcuCKzEz/bRKIglvn9PcTrzIHHZZIXa/mLU5otNE="
-    - secure: "XNvNiKfh2+JAHvbj7/jtaHKcu5FlN0fHwKwiDZYiCkTkG4kXsKlGtbQX4uk/RU4ZEe3pCPt1I6u66e5c57SLiDNMI0dnjdmSWL6Pcd1CoJVagYYq48TNgQARRe1zntXZvweRmqbfnsQiX5neLwaDj+UNM1yq6D3h2quPVrgoBBM="
 
 branches:
   except:
