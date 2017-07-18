@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion project.COMPILE_SDK
+    buildToolsVersion project.BUILD_TOOL
+
     defaultConfig {
+        minSdkVersion project.minSdkVersion
+        targetSdkVersion project.TARGET_SDK
         applicationId "florent37.github.com.rxsharedpreferences"
-        minSdkVersion 15
-        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -38,6 +39,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     compile 'io.reactivex.rxjava2:rxjava:2.0.9'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
     compile 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
