@@ -116,7 +116,7 @@ RxBusUser.getInstance().userChanged(user);
 
 # Credits
 
-Author: Florent Champigny [http://www.florentchampigny.com/](http://www.florentchampigny.com/)
+Author: Florent Champigny
 
 Blog : [http://www.tutos-android-france.com/](http://www.www.tutos-android-france.com/)
 
